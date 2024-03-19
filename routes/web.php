@@ -19,3 +19,4 @@ Route::get('/', [PageController::class, 'index'])->name('home');
 
 
 Route::get('/movies', [MovieController::class, 'index'])->name('movies.index');
+Route::get('/movies/{movie}', [MovieController::class,'show'])->name('movies.show');

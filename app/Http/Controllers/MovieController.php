@@ -13,4 +13,11 @@ class MovieController extends Controller
         $movies = Movie::all();
         return view('movies.index', compact('movies'));
     }
+
+    // mostra il dettaglio dei Movie
+    public function show(Movie $movie) 
+    {
+        
+        return view('movies.show', compact('movie'));
+    }
 }

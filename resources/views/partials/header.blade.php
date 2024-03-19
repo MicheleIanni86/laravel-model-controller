@@ -1,7 +1,7 @@
 <header>
     <nav class="navbar navbar-expand-lg bg-primary text-white">
         <div class="container">
-          <a class="navbar-brand" href="#">Home</a>
+          <a @class(['nav-link', 'active' => Route::currentRouteName() == 'index']) href="{{ route('home') }}">Home</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -10,11 +10,6 @@
               <li class="nav-item">
                 <a @class(['nav-link', 'active' => Route::currentRouteName() == 'movies.index']) href="{{ route('movies.index') }}">Movies List</a>
               </li>
-
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-danger" type="submit">Search</button>
-            </form>
           </div>
         </div>
       </nav>
